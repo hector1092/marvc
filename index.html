@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نموذج بيانات العميل</title>
+    <style>
+        /* إعدادات الخلفية والمؤثرات */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            animation: fadeIn 1.5s;
+        }
+
+        /* تأثير الدخول */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .form-container {
+            width: 100%;
+            max-width: 600px;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+            box-sizing: border-box;
+            animation: slideIn 1s ease-out;
+        }
+
+        /* تأثير الدخول من الأعلى */
+        @keyframes slideIn {
+            from { transform: translateY(-20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        h1 {
+            font-size: 32px;
+            text-align: center;
+            color: #007bff;
+            margin-bottom: 20px;
+            animation: pulse 1.5s infinite;
+        }
+
+        /* تأثير النبض */
+        @keyframes pulse {
+            0% { color: #007bff; }
+            50% { color: #0056b3; }
+            100% { color: #007bff; }
+        }
+
+        label {
+            font-size: 18px;
+            margin-bottom: 8px;
+            display: block;
+            color: #333;
+        }
+
+        input[type="text"], input[type="number"], select {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+        }
+
+        input[type="text"]:focus, input[type="number"]:focus, select:focus {
+            border-color: #007bff;
+            box-shadow: 0px 0px 10px rgba(0, 123, 255, 0.5);
+            outline: none;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 100%;
+            animation: bounce 2s infinite;
+        }
+
+        /* تأثير القفز */
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 14px;
+            color: #777;
+        }
+
+        .footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- عنوان الصفحة -->
+    <div class="form-container">
+        <h1>نموذج بيانات العميل</h1>
+
+        <!-- نموذج البيانات -->
+        <form id="customerForm">
+            <label for="name">اسم العميل:</label>
+            <input type="text" id="name" name="name" placeholder="أدخل اسم العميل" required>
+
+            <label for="address">العنوان:</label>
+            <input type="text" id="address" name="address" placeholder="أدخل العنوان" required>
+
+            <label for="phone1">رقم التواصل 1:</label>
+            <input type="text" id="phone1" name="phone1" placeholder="أدخل رقم التواصل الأول" required>
+
+            <label for="phone2">رقم التواصل 2 (اختياري):</label>
+            <input type="text" id="phone2" name="phone2" placeholder="أدخل رقم التواصل الثاني">
+
+            <!-- القائمة المنسدلة لأسماء الكتب -->
+            <label for="book">اسم الكتاب:</label>
+            <select id="book" name="book" required>
+                <option value="">اختر الكتاب</option>
+                <option value="البيع الناجح 1">البيع الناجح 1</option>
+                <option value="البيع الناجح 2">البيع الناجح 2</option>
+                <option value="100 عطر">100 عطر</option>
+                <option value="100 عنصر كميائي">100 عنصر كميائي</option>
+                <option value="100 منتج مطاعم">100 منتج مطاعم</option>
+                <option value="المخبوزات">المخبوزات</option>
+                <option value="قراءة الوجوه">قراءة الوجوه</option>
+                <option value="الحلم الواعي">الحلم الواعي</option>
+                <option value="كيف تصبح عبقرياً">كيف تصبح عبقرياً</option>
+                <option value="الحساب الذهني">الحساب الذهني</option>
+                <option value="القيادة والسيطرة">القيادة والسيطرة</option>
+                <option value="الجبن">الجبن</option>
+                <option value="الشوكولاته">الشوكولاته</option>
+                <option value="القراءة السريعة">القراءة السريعة</option>
+                <option value="أطفال أسوياء">أطفال أسوياء</option>
+                <option value="السعادة الزوجية">السعادة الزوجية</option>
+                <option value="3000 نصيحة">3000 نصيحة</option>
+                <option value="المدرب المحترف">المدرب المحترف</option>
+                <option value="الحصن والعلاج">الحصن والعلاج</option>
+            </select>
+
+            <label for="price">السعر:</label>
+            <input type="number" id="price" name="price" placeholder="أدخل السعر" required>
+
+            <label for="note">ملاحظة:</label>
+            <input type="text" id="note" name="note" placeholder="أدخل ملاحظاتك">
+
+            <button type="button" onclick="submitForm()">اكتمل</button>
+        </form>
+
+        <div class="footer">
+            <p>&copy; 2024 Green Book. جميع الحقوق محفوظة.</p>
+        </div>
+    </div>
+
+    <script>
+        function submitForm() {
+            var form = document.getElementById('customerForm');
+            var formData = new FormData(form);
+
+            fetch('https://script.google.com/macros/s/AKfycbzuHoQtI2C6UybGo6R34uGo0qi47UyKIDw0in8r7EpTyu2_waWCaoIyVl2mGkPBS78LYQ/exec', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.text())
+            .then(data => {
+                alert('تم إرسال البيانات بنجاح!');
+                resetForm();  // مسح الحقول بعد إرسال البيانات بنجاح
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('حدث خطأ أثناء إرسال البيانات. حاول مرة أخرى.');
+            });
+        }
+
+        // دالة لمسح الحقول في النموذج بعد الإرسال
+        function resetForm() {
+            document.getElementById('customerForm').reset();
+        }
+    </script>
+
+</body>
+</html>
